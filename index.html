@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div style="width: 100%; display: flex; align-items: center">
+      <div style=" display: flex; justify-content: center">
+        <div style="display: flex; justify-content: center; align-items: center; font-size: large;"><h1 style="margin-left: 50px;">Conway's Game of Life</h1></div>
+        <div style="margin-left: 30px;margin-top: 20px; line-height: 0.7;">
+            <h4>Rules:</h4>
+            <h6>1.Any live cell with fewer than two live neighbours dies, as if by underpopulation.</h6><br>
+            <h6>2.Any live cell with two or three live neighbours lives on to the next generation.</h6><br>
+            <h6>3.Any live cell with more than three live neighbours dies, as if by overpopulation</h6>.<br>
+            <h6>4.Any dead cell with exactly three live neighbours becomes a live cell, as if by reproduction.</h6><br>
+        </div>
+      </div>
+      <div style="display: flex; justify-content: center;margin: 0; padding: 0;">
+        <button id="start">Start/Stop</button>
+        <button id="reset">Reset</button>
+        <button id="random">Random</button>
+        <div class="slidecontainer">
+          <input
+            type="range"
+            min="2"
+            max="10"
+            value="50"
+            class="slider"
+            id="myRange"
+            name="speed"
+            default="3"
+          />
+          <p>Speed: <span id="demo" style="display: inline-block;"></span></p>
+        </div>
+      </div>
+    </div>
+    <div
+      id="cont"
+      style="
+        height: 90vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0;
+      "
+    ></div>
+
+    <script src="p5.js"></script>
+    <script src="one.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>
